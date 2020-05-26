@@ -1,5 +1,5 @@
 module.exports = {
-    "Login test agima.ru" : function (browser) {
+    "Client test agima.ru": function (browser) {
         const mainPage = browser.page.mainPage();
         mainPage
             .navigate()
@@ -18,6 +18,19 @@ module.exports = {
             .waitForElementNotVisible("@thanksText")
             .assert.containsText("@newCustomerTitle", "Анкета для новых клиентов AGIMA")
         browser.end();
+    },
+
+    "Failed test screenshots": function (browser) {
+        const mainPage = browser.page.mainPage();
+        mainPage
+            .navigate()
+            .waitForElementVisible("@mainTitle")
+            .click("@clientLink")
+        const newCustomer = browser.page.newCustomer();
+        newCustomer
+            .waitForElementVisible("@newCustomerTitle")
+            .assert.containsText("@newCustomerTitle", "Анкета для старых клиентов AGIMA")
+        browser.end();
     }
-};
+}
 
