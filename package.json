@@ -1,7 +1,7 @@
 {
   "name": "agimatest",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "",
   "repository": "https://github.com/MadloptD/AgimaTest.git",
   "author": "madlopt <madlopt@gmail.com>",
   "license": "ISC",
