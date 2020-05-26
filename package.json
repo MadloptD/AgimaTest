@@ -5,6 +5,9 @@
   "repository": "https://github.com/MadloptD/AgimaTest.git",
   "author": "madlopt <madlopt@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "tests": "nightwatch"
+  },
   "devDependencies": {
     "nightwatch": "^1.3.5",
     "chromedriver": "^83.0.0",
