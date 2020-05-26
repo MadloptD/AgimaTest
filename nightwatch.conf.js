@@ -11,15 +11,14 @@ module.exports = {
             desiredCapabilities: {
                 browserName: "chrome",
                 chromeOptions : {
-                    "args" : ["start-maximized"]
+                    args : ["start-maximized"]
                 }
-
             },
             screenshots: {
-                "enabled": true,
-                "path": "./tests_output",
-                "on_failure": true,
-                "on_error": true
+                enabled: true,
+                path: "./tests_output",
+                on_failure: true,
+                on_error: true
             },
         }
     }

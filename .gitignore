@@ -160,4 +160,4 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
-.test_output
+test_output/
