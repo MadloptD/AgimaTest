@@ -1,6 +1,5 @@
 const fillInContacts = {
     setForm: function(name, companyName, phone, email, message="This is test message") {
-        this.api.pause(250)
         this.setValue("@message", message)
             .setValue("@name", name)
             .setValue("@companyName", companyName)
@@ -21,7 +20,10 @@ module.exports = {
         email:  "#email",
         agreement: "label.new-customers__agreement-label",
         sendBtn: "a.js-submit",
-        thanksText: "//h4[contains(text('Спасибо.'),'.')]",
+        thanksText: {
+            selector: "//div[@class='new-customers__popup-wrapper']/h4[contains(text(),'.')]",
+            locateStrategy: 'xpath'
+        },
         closeBtn: "a.js-popup-close"
     }
 };

@@ -12,14 +12,11 @@ module.exports = {
             .setForm("Test", "Company", "4951234567", "test@test.ru")
             .click("@agreement")
             .click("@sendBtn")
-        const popup = newCustomer.section.thanksPopup
-        popup.waitForElementVisible("@thanksText")
+            .waitForElementVisible("@thanksText")
             .assert.containsText("@thanksText", "Спасибо. Мы получили вашу заявку и ответим в течение пары дней.")
-
-
-
-
-        browser.pause(20000)
+            .click("@closeBtn")
+            .waitForElementNotVisible("@thanksText")
+            .assert.containsText("@newCustomerTitle", "Анкета для новых клиентов AGIMA")
         browser.end();
     }
 };
